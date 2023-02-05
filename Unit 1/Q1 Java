@@ -1,0 +1,26 @@
+// Q. Jeevan got an assignment where he need to determine whether a given integer is prime number or not. Write a C++ programming solution to help Amit.
+Input format: First Line contain one integer number N
+Constraint: N should be positive
+Output format: Return "Prime Number" incase integer is a prime number or return "Not Prime Number" incase it is not.
+
+Solution-
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int np=0;
+        for(int i=2; i<=Math.sqrt(a); i++)
+        {
+            if(a%i==0)
+                np++;
+        }
+        if(np==0)
+            System.out.println("Prime Number");
+        else
+            System.out.println("Not Prime Number");
+    }
+}
